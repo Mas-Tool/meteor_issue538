@@ -1,0 +1,21 @@
+<head>
+  <title>MethodTest</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+    1.Please login:  {{loginButtons}}
+
+    {{#if currentUser}}
+        <br/>
+        2. Now that you are logged in, please disconnect from the internet and press that button:
+        <input type="button" value="Click" id="btnSendMessage"/>
+        <br/>
+        this will use Meteor.call and have a callback to alert the result.
+        <br/>
+        3. Once you clicked the button, connect to the internet and wait for an alert to show up. (expected)
+    {{/if}}
+</template>
